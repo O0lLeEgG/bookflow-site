@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Довідка та відповіді на часті запитання щодо роботи з платформою онлайн-бронювання BookFlow.">
+    <title>Допомога — BookFlow</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2032%2032%27%3E%3Crect%20width=%2732%27%20height=%2732%27%20rx=%278%27%20fill=%27%235F93C0%27/%3E%3Ctext%20x=%2716%27%20y=%2721%27%20font-size=%2715%27%20font-family=%27sans-serif%27%20font-weight=%27bold%27%20fill=%27white%27%20text-anchor=%27middle%27%3EBF%3C/text%3E%3C/svg%3E">    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">BF</span>
+                <span>BookFlow</span>
+            </a>
+
+            <button type="button" class="burger-btn" id="burgerBtn" aria-label="Відкрити меню" aria-expanded="false" aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu" aria-label="Головна навігація">
+                <ul class="nav-list">
+                    <li><a href="index.html#features">Можливості</a></li>
+                    <li><a href="index.html#booking-demo">Послуги</a></li>
+                    <li><a href="pricing.html">Тарифи</a></li>
+                    <li><a href="help.html">Допомога</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="404.html" class="nav-login">Увійти</a>
+                    <button type="button" class="btn btn-dark open-modal-btn" data-service="Підключення акаунта BookFlow">
+                        Почати роботу
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <p class="hero-kicker">База знань і підтримка</p>
+                <h1>Довідка та відповіді на типові запитання</h1>
+                <p class="hero-desc">
+                    Короткі пояснення щодо налаштування розкладу, онлайн-запису клієнтів, нагадувань і перенесення візитів.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Часті запитання</h2>
+                    <p>Основні сценарії щоденної роботи з системою бронювання.</p>
+                </div>
+
+                <div class="features-stack">
+                    <article class="feature-panel">
+                        <span class="feature-tag">01 · Розклад</span>
+                        <h3>Як система визначає вільні години для запису?</h3>
+                        <p>Клієнт бачить лише ті інтервали, які вільні з урахуванням робочих годин фахівця, перерв, тривалості обраної послуги та вже підтверджених бронювань.</p>
+                    </article>
+
+                    <article class="feature-panel">
+                        <span class="feature-tag">02 · Клієнти</span>
+                        <h3>Чи може клієнт самостійно перенести або скасувати зустріч?</h3>
+                        <p>Так, у налаштуваннях можна задати допустимий час до початку візиту, за який клієнт здатен перенести або скасувати бронювання без звернення до адміністратора.</p>
+                    </article>
+
+                    <article class="feature-panel">
+                        <span class="feature-tag">03 · Нагадування та оплати</span>
+                        <h3>Як зменшити кількість пропущених візитів?</h3>
+                        <p>Для цього використовуються автоматичні нагадування заздалегідь та можливість приймати повну оплату або фіксовану передоплату під час оформлення запису.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-muted">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-content">
+                        <h2>Не знайшли відповідь на своє запитання?</h2>
+                        <p>Залиште заявку на консультацію або перейдіть до сторінки тарифів, щоб обрати відповідний план.</p>
+                        <div class="cta-actions">
+                            <button type="button" class="btn btn-white open-modal-btn" data-service="Запит у службу підтримки">
+                                Зв'язатися з нами
+                            </button>
+                            <a href="pricing.html" class="btn btn-outline">Переглянути тарифи</a>
+                            <a href="index.html" class="btn btn-outline">На головну</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark">BF</span>
+                    <span>BookFlow</span>
+                </a>
+                <p class="footer-desc">Платформа для керування онлайн-бронюваннями, розкладом та записом клієнтів.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Сторінки</h3>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="pricing.html">Тарифи</a></li>
+                    <li><a href="help.html">Допомога</a></li>
+                    <li><a href="index.html#booking-demo">Послуги</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Розділи</h3>
+                <ul>
+                    <li><a href="index.html#features">Можливості</a></li>
+                    <li><a href="index.html#industries">Сфери бізнесу</a></li>
+                    <li><a href="index.html#advantages">Переваги</a></li>
+                    <li><a href="404.html">Особистий кабінет</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Інформація</h3>
+                <ul>
+                    <li><a href="404.html">Документація</a></li>
+                    <li><a href="404.html">Політика конфіденційності</a></li>
+                    <li><a href="404.html">Умови використання</a></li>
+                    <li><a href="404.html">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>BookFlow — навчальний курсовий проєкт з веб-розробки.</p>
+        </div>
+    </footer>
+
+    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Прокрутити вгору">
+        &uarr;
+    </button>
+
+    <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button type="button" class="modal-close" id="closeModalBtn" aria-label="Закрити вікно">&times;</button>
+            <h2 id="modalTitle">Форма онлайн-бронювання</h2>
+            <p class="modal-desc">Заповніть обов'язкові поля для оформлення заявки або демонстрації системи.</p>
+
+            <form id="bookingForm" novalidate>
+                <div class="form-group">
+                    <label for="selectedService">Обрана позиція</label>
+                    <input type="text" id="selectedService" name="selectedService" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Ім'я та прізвище *</label>
+                    <input type="text" id="userName" name="userName" placeholder="Введіть ваше ім'я" required>
+                    <span class="field-error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="userContact">Email або телефон *</label>
+                    <input type="text" id="userContact" name="userContact" placeholder="name@example.com або +380..." required>
+                    <span class="field-error" id="contactError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="userDate">Бажана дата *</label>
+                    <input type="date" id="userDate" name="userDate" required>
+                    <span class="field-error" id="dateError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-block">Підтвердити</button>
+                <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

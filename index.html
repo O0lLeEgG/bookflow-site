@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BookFlow — платформа для керування онлайн-бронюваннями, розкладом фахівців, онлайн-оплатами та автоматичними нагадуваннями клієнтам.">
+    <title>BookFlow — Система керування онлайн-бронюваннями</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2032%2032%27%3E%3Crect%20width=%2732%27%20height=%2732%27%20rx=%278%27%20fill=%27%235F93C0%27/%3E%3Ctext%20x=%2716%27%20y=%2721%27%20font-size=%2715%27%20font-family=%27sans-serif%27%20font-weight=%27bold%27%20fill=%27white%27%20text-anchor=%27middle%27%3EBF%3C/text%3E%3C/svg%3E">    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">BF</span>
+                <span>BookFlow</span>
+            </a>
+
+            <button type="button" class="burger-btn" id="burgerBtn" aria-label="Відкрити меню" aria-expanded="false" aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu" aria-label="Головна навігація">
+                <ul class="nav-list">
+                    <li><a href="#features">Можливості</a></li>
+                    <li><a href="#booking-demo">Демо запису</a></li>
+                    <li><a href="pricing.html">Тарифи</a></li>
+                    <li><a href="help.html">Допомога</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="404.html" class="nav-login">Увійти</a>
+                    <button type="button" class="btn btn-dark open-modal-btn" data-service="Тестовий акаунт BookFlow">
+                        Спробувати безкоштовно
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Перший екран -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="hero-kicker">Програмне забезпечення для онлайн-запису</p>
+                    <h1>Керування онлайн-бронюваннями та розкладом без зайвої рутини</h1>
+                    <p class="hero-desc">
+                        Платформа допомагає приймати заявки цілодобово, синхронізувати графік спеціалістів, налаштовувати нагадування та приймати оплати онлайн.
+                    </p>
+                    <div class="hero-cta-group">
+                        <button type="button" class="btn btn-white open-modal-btn" data-service="Демонстрація системи">
+                            Замовити демо
+                        </button>
+                        <a href="#booking-demo" class="btn btn-outline">Переглянути приклад</a>
+                    </div>
+                    <p class="hero-subtext">14 днів тестового доступу без прив'язки картки</p>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="schedule-top">
+                        <div>
+                            <h2>Розклад на сьогодні</h2>
+                            <p>Онлайн-синхронізація слотів</p>
+                        </div>
+                        <span class="schedule-badge">Активно</span>
+                    </div>
+
+                    <div class="slot-list">
+                        <div class="slot-item is-booked">
+                            <span class="slot-time">10:00</span>
+                            <div class="slot-info">
+                                <strong>Консультація спеціаліста</strong>
+                                <span>Ірина Мельник · Оплачено</span>
+                            </div>
+                            <span class="slot-status">Зайнято</span>
+                        </div>
+
+                        <div class="slot-item is-booked">
+                            <span class="slot-time">11:30</span>
+                            <div class="slot-info">
+                                <strong>Індивідуальний прийом</strong>
+                                <span>Артем Савчук · Нагадування надіслано</span>
+                            </div>
+                            <span class="slot-status">Зайнято</span>
+                        </div>
+
+                        <div class="slot-item is-free">
+                            <span class="slot-time">14:00</span>
+                            <div class="slot-info">
+                                <strong>Вільний слот (45 хв)</strong>
+                                <span>Доступний для онлайн-бронювання</span>
+                            </div>
+                            <button type="button" class="slot-btn open-modal-btn" data-service="Слот на 14:00 (45 хв)">
+                                Записати
+                            </button>
+                        </div>
+
+                        <div class="slot-item is-free">
+                            <span class="slot-time">16:00</span>
+                            <div class="slot-info">
+                                <strong>Вільний слот (60 хв)</strong>
+                                <span>Доступний для онлайн-бронювання</span>
+                            </div>
+                            <button type="button" class="slot-btn open-modal-btn" data-service="Слот на 16:00 (60 хв)">
+                                Записати
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ключові можливості -->
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Основні можливості системи бронювання</h2>
+                    <p>Усе необхідне для автоматизації записів, контролю завантаженості та взаємодії з клієнтами.</p>
+                </div>
+
+                <div class="features-stack">
+                    <article class="feature-panel feature-wide">
+                        <div class="feature-copy">
+                            <span class="feature-tag">01 · Графік та доступність</span>
+                            <h3>Гнучке налаштування робочих годин і перерв</h3>
+                            <p>Задавайте робочі дні, інтервали між записами, вихідні та індивідуальні графіки фахівців. Система показує клієнтам лише актуальні вільні вікна.</p>
+                        </div>
+                        <div class="hours-box">
+                            <div class="hours-row"><span>Понеділок – П'ятниця</span><strong>09:00 – 19:00</strong></div>
+                            <div class="hours-row"><span>Субота</span><strong>10:00 – 16:00</strong></div>
+                            <div class="hours-row"><span>Інтервал між візитами</span><strong>15 хв</strong></div>
+                            <div class="hours-row is-muted"><span>Неділя</span><strong>Вихідний день</strong></div>
+                        </div>
+                    </article>
+
+                    <div class="feature-pair">
+                        <article class="feature-panel">
+                            <span class="feature-tag">02 · Самостійний запис</span>
+                            <h3>Бронювання та перенесення в кілька кліків</h3>
+                            <p>Клієнти обирають послугу й зручний час без дзвінків адміністратору, а за потреби можуть скасувати або перенести зустріч за посиланням у повідомленні.</p>
+                        </article>
+
+                        <article class="feature-panel">
+                            <span class="feature-tag">03 · Нагадування та оплати</span>
+                            <h3>Зменшення неявок і онлайн-депозити</h3>
+                            <p>Автоматичні нагадування заздалегідь та можливість приймати повну оплату чи передоплату допомагають утримувати стабільний розклад.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секція послуг / приклад сторінки запису -->
+        <section class="section section-muted" id="booking-demo">
+            <div class="container">
+                <div class="section-header section-center">
+                    <h2>Приклад картки послуг для клієнтського запису</h2>
+                    <p>Клієнт бачить тривалість, вартість і короткий опис кожної послуги та може одразу відкрити форму бронювання .</p>
+                </div>
+
+                <div class="booking-showcase">
+                    <div class="showcase-head">
+                        <div>
+                            <h3>Студія онлайн-консультацій «Крок»</h3>
+                            <p>Оберіть послугу для тестового запису</p>
+                        </div>
+                        <span class="showcase-pill">Онлайн-запис відкрито</span>
+                    </div>
+
+                    <div class="service-rows">
+                        <div class="service-row">
+                            <div class="service-body">
+                                <h4>Консультація фахівця (очно або онлайн)</h4>
+                                <p class="service-meta">Тривалість: 45 хв · Вартість: 500 грн</p>
+                                <p class="service-desc">Розбір задачі, відповіді на запитання та узгодження наступних кроків у зручний час.</p>
+                            </div>
+                            <button type="button" class="btn btn-dark open-modal-btn" data-service="Консультація фахівця (45 хв, 500 грн)">
+                                Забронювати
+                            </button>
+                        </div>
+
+                        <div class="service-row">
+                            <div class="service-body">
+                                <h4>Розширена сесія супроводу</h4>
+                                <p class="service-meta">Тривалість: 90 хв · Вартість: 950 грн</p>
+                                <p class="service-desc">Детальна індивідуальна робота з фіксацією підсумків та планом подальших дій.</p>
+                            </div>
+                            <button type="button" class="btn btn-dark open-modal-btn" data-service="Розширена сесія супроводу (90 хв, 950 грн)">
+                                Забронювати
+                            </button>
+                        </div>
+
+                        <div class="service-row">
+                            <div class="service-body">
+                                <h4>Експрес-зустріч у форматі відеодзвінка</h4>
+                                <p class="service-meta">Тривалість: 30 хв · Вартість: 350 грн</p>
+                                <p class="service-desc">Коротка онлайн-зустріч для уточнення деталей, перевірки статусу та швидкої консультації.</p>
+                            </div>
+                            <button type="button" class="btn btn-dark open-modal-btn" data-service="Експрес-зустріч (30 хв, 350 грн)">
+                                Забронювати
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Сфери використання -->
+        <section class="section" id="industries">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Підходить для різних сфер послуг</h2>
+                    <p>Налаштування розкладу підлаштовуються під формат роботи команди або окремого спеціаліста.</p>
+                </div>
+
+                <div class="grid-4">
+                    <article class="info-card">
+                        <span class="card-index">01</span>
+                        <h3>Освіта та репетиторство</h3>
+                        <p>Індивідуальні та групові заняття, облік абонементів і зручний розклад для учнів.</p>
+                    </article>
+
+                    <article class="info-card">
+                        <span class="card-index">02</span>
+                        <h3>Приватна практика та медицина</h3>
+                        <p>Попередній запис на прийом, анкети клієнтів і контроль завантаженості кабінетів.</p>
+                    </article>
+
+                    <article class="info-card">
+                        <span class="card-index">03</span>
+                        <h3>Салони та студії догляду</h3>
+                        <p>Вибір майстра, розрахунок тривалості процедур і нагадування перед візитом.</p>
+                    </article>
+
+                    <article class="info-card">
+                        <span class="card-index">04</span>
+                        <h3>Сервісні центри та автопослуги</h3>
+                        <p>Фіксація часу візиту, типу обслуговування та контактних даних клієнта в заявці.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Переваги та інтеграції -->
+        <section class="section section-muted" id="advantages">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Переваги та інтеграції платформи</h2>
+                    <p>Системний порядок у записах, клієнтській базі та суміжних сервісах.</p>
+                </div>
+
+                <div class="grid-4 benefits-grid">
+                    <div class="benefit-card"><span>01</span><h3>Синхронізація календарів</h3><p>Актуальний розклад без подвійних записів на однаковий час.</p></div>
+                    <div class="benefit-card"><span>02</span><h3>Онлайн-оплати</h3><p>Підтримка швидких платежів та передоплат під час оформлення заявки.</p></div>
+                    <div class="benefit-card"><span>03</span><h3>Клієнтська база</h3><p>Зручний перегляд історії візитів і контактів кожного клієнта.</p></div>
+                    <div class="benefit-card"><span>04</span><h3>Автонагадування</h3><p>Сповіщення клієнтам і фахівцям про заплановані зустрічі.</p></div>
+                    <div class="benefit-card"><span>05</span><h3>Форми запису</h3><p>Збір додаткової інформації ще до початку консультації чи візиту.</p></div>
+                    <div class="benefit-card"><span>06</span><h3>Пряме посилання</h3><p>Поширення сторінки бронювання в соцмережах, месенджерах або на сайті.</p></div>
+                    <div class="benefit-card"><span>07</span><h3>Правила перенесення</h3><p>Контроль термінів скасування або перенесення запису клієнтом.</p></div>
+                    <div class="benefit-card"><span>08</span><h3>Звіти та статистика</h3><p>Аналіз кількості записів, завантаженості та популярних послуг.</p></div>
+                </div>
+
+                <div class="integrations-box">
+                    <p>Сумісні сервіси та інтеграції:</p>
+                    <ul class="integrations-tags">
+                        <li>Google Calendar</li>
+                        <li>LiqPay</li>
+                        <li>Monobank</li>
+                        <li>Telegram</li>
+                        <li>Zoom</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Нижній блок дії -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-content">
+                        <h2>Налаштуйте онлайн-бронювання для свого сервісу</h2>
+                        <p>Перейдіть до тарифів, відкрийте довідку або заповніть форму запису на демонстрацію роботи системи.</p>
+                        <div class="cta-actions">
+                            <button type="button" class="btn btn-white open-modal-btn" data-service="Заявка на підключення">
+                                Залишити заявку
+                            </button>
+                            <a href="pricing.html" class="btn btn-outline">Переглянути тарифи</a>
+                            <a href="help.html" class="btn btn-outline">Довідка</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo">
+                    <span class="logo-mark">BF</span>
+                    <span>BookFlow</span>
+                </a>
+                <p class="footer-desc">Платформа для керування онлайн-бронюваннями, розкладом та записом клієнтів.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Сторінки</h3>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="pricing.html">Тарифи</a></li>
+                    <li><a href="help.html">Допомога</a></li>
+                    <li><a href="#booking-demo">Демо запису</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Розділи</h3>
+                <ul>
+                    <li><a href="#features">Можливості</a></li>
+                    <li><a href="#industries">Сфери бізнесу</a></li>
+                    <li><a href="#advantages">Переваги</a></li>
+                    <li><a href="404.html">Особистий кабінет</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Інформація</h3>
+                <ul>
+                    <li><a href="404.html">Документація</a></li>
+                    <li><a href="404.html">Політика конфіденційності</a></li>
+                    <li><a href="404.html">Умови використання</a></li>
+                    <li><a href="404.html">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>BookFlow — навчальний курсовий проєкт з веб-розробки.</p>
+        </div>
+    </footer>
+
+    <!-- Кнопка «Вгору» -->
+    <button type="button" class="scroll-top-btn" id="scrollTopBtn" aria-label="Прокрутити вгору">
+        ↑
+    </button>
+
+    <!-- Модальне вікно з формою -->
+    <div class="modal-backdrop" id="bookingModal" aria-hidden="true">
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button type="button" class="modal-close" id="closeModalBtn" aria-label="Закрити вікно">&times;</button>
+            <h2 id="modalTitle">Форма онлайн-бронювання</h2>
+            <p class="modal-desc">Заповніть обов'язкові поля для оформлення запису або тестового доступу.</p>
+
+            <form id="bookingForm" novalidate>
+                <div class="form-group">
+                    <label for="selectedService">Обрана позиція</label>
+                    <input type="text" id="selectedService" name="selectedService" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="userName">Ім'я та прізвище *</label>
+                    <input type="text" id="userName" name="userName" placeholder="Введіть ваше ім'я" required>
+                    <span class="field-error" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="userContact">Email або телефон *</label>
+                    <input type="text" id="userContact" name="userContact" placeholder="name@example.com або +380..." required>
+                    <span class="field-error" id="contactError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="userDate">Бажана дата *</label>
+                    <input type="date" id="userDate" name="userDate" required>
+                    <span class="field-error" id="dateError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-block">Підтвердити</button>
+                <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
